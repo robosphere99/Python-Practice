@@ -1,7 +1,7 @@
 import qrcode
 
 # Data you want to encode
-data = "Yogesh Madra Chood"
+data = "Anil is your father man!"
 
 # Create QR code instance
 qr = qrcode.QRCode(

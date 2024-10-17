@@ -1,5 +1,6 @@
 import cv2
 from pyzbar.pyzbar import decode
+import numpy as np
 
 # Function to read and decode QR code from the image
 def read_qr_code(frame):
