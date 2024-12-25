@@ -16,7 +16,7 @@ startGame = False
 scores = [0, 0]  # [AI, Player]
  
 while True:
-    imgBG = cv2.imread("Resources/BG.png")
+    imgBG = cv2.imread(r"C:\Users\anila\OneDrive\Documents\Python_practice\Murtaza_workshop\Rock Paper Scissors\Resources\BG.png")
     success, img = cap.read()
  
     imgScaled = cv2.resize(img, (0, 0), None, 0.875, 0.875)
@@ -47,7 +47,8 @@ while True:
                         playerMove = 3
  
                     randomNumber = random.randint(1, 3)
-                    imgAI = cv2.imread(f'Resources/{randomNumber}.png', cv2.IMREAD_UNCHANGED)
+                    base = r"C:\Users\anila\OneDrive\Documents\Python_practice\Murtaza_workshop\Rock Paper Scissors\Resources"
+                    imgAI = cv2.imread(f'{base}\\{randomNumber}.png', cv2.IMREAD_UNCHANGED)
                     imgBG = cvzone.overlayPNG(imgBG, imgAI, (149, 310))
  
                     # Player Wins
@@ -79,3 +80,5 @@ while True:
         startGame = True
         initialTime = time.time()
         stateResult = False
+    if key == ord('q'):
+        break    
